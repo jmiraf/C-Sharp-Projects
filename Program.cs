@@ -10,16 +10,30 @@ namespace Assignment4
 	{
 		static void Main(string[] args)
 		{
-			//Instantiate the MathMethods2 class
-			MathMethods2 math1 = new MathMethods2();
-			//Call the first method with an int parameter
-			Console.WriteLine(math1.MathOp(7));
-			//Call the second method with a decimal parameter
-			Console.WriteLine(math1.MathOp(7.3m));
-			//Call the third method with a string parameter
-			Console.WriteLine(math1.MathOp("7"));
+			//Instantiate the MathOperation1 class
+			MathOperation1 mathOp = new MathOperation1();
+			//First parameter
+			Console.WriteLine("Enter a number:");
+			int num1 = Convert.ToInt32(Console.ReadLine());
+			//second parameter
+			Console.WriteLine("Enter a second number:");
+			//Call method with 2 parameters
+			int num2 = Convert.ToInt32(Console.ReadLine());
+			int results = mathOp.MathOperation(num1, num2);
+			Console.WriteLine(num1 + " + " + num2 + " = " + results);
+
 			Console.ReadLine();
-			
+
+			//Instantiate the MathMethods2 class
+			//MathMethods2 math1 = new MathMethods2();
+			//Call the first method with an int parameter
+			//Console.WriteLine(math1.MathOp(7));
+			//Call the second method with a decimal parameter
+			//Console.WriteLine(math1.MathOp(7.3m));
+			//Call the third method with a string parameter
+			//Console.WriteLine(math1.MathOp("7"));
+			//Console.ReadLine();
+
 			//Calling Method Assignment
 			//Console.WriteLine("You've encoutered Grozyni the Brigand and he launches a surprise attack.");
 			//Console.WriteLine("Input your defense stat:");
