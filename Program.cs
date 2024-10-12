@@ -10,6 +10,29 @@ namespace Assignment4
 	{
 		static void Main(string[] args)
 		{
+			
+			//Module 6 Parsing Enums Assignment
+			bool isvalid = false;
+			while(!isvalid)
+			{
+				try
+				{
+					//Prompt the user to enter the current day of the week
+					Console.WriteLine("What day is today?");
+					string daytoday = Console.ReadLine();
+					//Assign the value to a variable of the enum data type
+					DaysOfTheWeek day = (DaysOfTheWeek)Enum.Parse(typeof(DaysOfTheWeek), daytoday);
+					Console.WriteLine("Have a nice " + day);
+					Console.ReadLine();
+					isvalid = true;
+				}
+				catch (ArgumentException ex)
+				{
+					Console.WriteLine("Please enter an actual day of the week");
+				}
+			}
+			//end of Module 6 assignment
+			
 			//Instantiate the MathOperation1 class
 			MathOperation1 mathOp = new MathOperation1();
 			//First parameter
@@ -51,6 +74,16 @@ namespace Assignment4
 			//int damage = MathMethods.Attack(strength);
 			//Console.WriteLine("You have landed a critical attack and dealt " + damage + " HP worth of damage.");
 			//Console.ReadLine();
+		}
+		public enum DaysOfTheWeek
+		{
+			Monday,
+			Tuesday,
+			Wednesday,
+			Thursday,
+			Friday,
+			Saturday,
+			Sunday
 		}
 	}
 }
