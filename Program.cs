@@ -10,6 +10,12 @@ namespace Assignment4
 	{
 		static void Main(string[] args)
 		{
+
+			//Struct Assignment, create an object of data type Number and assign an amount to it then print to the console
+			Number num1 = new Number();
+			num1.Amount = Convert.ToInt32("100");
+			Console.WriteLine(num1.Amount);
+			Console.ReadLine();
 			
 			//Module 6 Parsing Enums Assignment
 			bool isvalid = false;
