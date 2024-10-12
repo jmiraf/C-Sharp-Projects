@@ -9,6 +9,6 @@ namespace Assignment4
 	//Create a struct called Number and property "Amount" with data type decimal
 	public struct Number
 	{
-		public int Amount { get; set; }
+		public decimal Amount { get; set; }
 	}
 }
